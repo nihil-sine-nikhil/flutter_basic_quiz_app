@@ -15,6 +15,8 @@ class AnswerButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
+        maximumSize: Size(250, 70),
+        minimumSize: Size(250, 70),
         padding: const EdgeInsets.symmetric(
           vertical: 10,
           horizontal: 40,
@@ -25,7 +27,7 @@ class AnswerButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
         ),
       ),
-      child: Text(answerText),
+      child: FittedBox(fit: BoxFit.scaleDown, child: Text(answerText)),
     );
   }
 }
