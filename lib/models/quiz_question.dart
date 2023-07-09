@@ -3,4 +3,9 @@ class QuizQuestion {
 
   final String text;
   final List<String> answers;
+  List<String> getShuffledAnswers() {
+    var newList = List.of(answers);
+    newList.shuffle();
+    return newList;
+  }
 }
