@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'answer_button.dart';
 import 'data/questions.dart';
-
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({
     super.key,
@@ -52,7 +51,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
-            ...currentQuestion.getShuffledAnswers().map((answer) {
+            ...currentQuestion.shuffledAnswers.map((answer) {
               return AnswerButton(
                 answerText: answer,
                 onTap: () {
